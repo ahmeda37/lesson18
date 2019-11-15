@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Database Lesson</h1>
+    {% if users %}
+        {% for user in users %}
+        <p>Hello {{user.name}}</p>
+        <p>this is your email: {{user.email}}</p>
+        {% endfor %}
+    {% endif %}
+    <form method="post" action="/login">
+        <input type="text" name="user-name" placeholder="Enter Name">
+        <input type="email" name="user-email" placeholder="Enter email">
+
+        <button>Submit</button>
+    </form>
+</body>
+</html>
